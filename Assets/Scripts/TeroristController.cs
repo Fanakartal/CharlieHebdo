@@ -10,8 +10,9 @@ public class TeroristController : MonoBehaviour {
     {
         Rigidbody2D movingBullet;
         movingBullet = Instantiate(bullet, new Vector2(-7.13f, -1.54f), Quaternion.identity) as Rigidbody2D;
-        
-        //movingBullet.velocity = transform.TransformDirection(Vector2.right * 10);
+        movingBullet.velocity = new Vector2(5, 0);
+        //movingBullet.AddForce(transform.forward * 10);
+
 	}
 	
 	// Update is called once per frame
