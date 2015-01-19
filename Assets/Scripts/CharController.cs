@@ -3,7 +3,12 @@ using System.Collections;
 
 public class CharController : MonoBehaviour {
 
+    public float rightBoundry;
+    public float leftBoundry;
+    public float topBoundry;
+    public float bottomBoundry;
     float speed = 8.0f;
+    
     
     // Use this for initialization
 	void Start () {
@@ -19,11 +24,17 @@ public class CharController : MonoBehaviour {
         if (Input.GetAxis("Vertical") != 0)
             transform.position = new Vector3(transform.position.x, (transform.position.y + Input.GetAxis("Vertical") * speed * Time.deltaTime), transform.position.z);
 
-       /* if (transform.position.x > xBoundry)
-            transform.position = new Vector3(xBoundry, transform.position.y, transform.position.z);
+       if (transform.position.x > rightBoundry)
+            transform.position = new Vector3(rightBoundry, transform.position.y, transform.position.z);
 
-        if (transform.position.x < -xBoundry)
-            transform.position = new Vector3(-xBoundry, transform.position.y, transform.position.z);
-        * */
+       if (transform.position.x < leftBoundry)
+            transform.position = new Vector3(leftBoundry, transform.position.y, transform.position.z);
+
+       if (transform.position.y > topBoundry)
+           transform.position = new Vector3(transform.position.x, topBoundry, transform.position.z);
+
+       if (transform.position.y < bottomBoundry)
+           transform.position = new Vector3(transform.position.x, bottomBoundry, transform.position.z);
+        
 	}
 }
