@@ -4,6 +4,8 @@ using System.Collections;
 public class GameManagerController : MonoBehaviour {
 
 	public Transform terorist;
+    public Transform charb;
+    public Transform bullet;
     
     // Use this for initialization
 	void Start () 
@@ -14,6 +16,7 @@ public class GameManagerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-	
+        //if (bullet.transform.position.x > 12.0f)
+        //    Destroy(bullet);
 	}
 }

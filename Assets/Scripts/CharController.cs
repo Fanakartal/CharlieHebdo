@@ -8,6 +8,8 @@ public class CharController : MonoBehaviour {
     public float topBoundry;
     public float bottomBoundry;
     float speed = 8.0f;
+
+    private GameObject bullet;
     
     
     // Use this for initialization
@@ -37,4 +39,16 @@ public class CharController : MonoBehaviour {
            transform.position = new Vector3(transform.position.x, bottomBoundry, transform.position.z);
         
 	}
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Bullet")
+            Destroy(gameObject);
+    }
+
+    void OnDestroy()
+    {
+        bullet = GameObject.FindWithTag("Bullet");
+        Destroy(bullet);
+    }
 }
