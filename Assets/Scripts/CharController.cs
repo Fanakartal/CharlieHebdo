@@ -50,5 +50,7 @@ public class CharController : MonoBehaviour {
     {
         bullet = GameObject.FindWithTag("Bullet");
         Destroy(bullet);
+
+        Application.LoadLevel(1);
     }
 }
