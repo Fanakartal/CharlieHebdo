@@ -29,7 +29,7 @@ public class GameManagerController : MonoBehaviour {
                 timer += Time.deltaTime;
             }
 
-            Debug.Log("timer: " + timer);
+            //Debug.Log("timer: " + timer);
 
             if (timer > 10.0f)
             {

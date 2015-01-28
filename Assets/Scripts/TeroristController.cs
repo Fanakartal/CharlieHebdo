@@ -15,7 +15,7 @@ public class TeroristController : MonoBehaviour {
         bulletPoint = -1.54f;
 
         movingBullet = Instantiate(bullet, new Vector2(-7.13f, bulletPoint), Quaternion.identity) as GameObject;
-        movingBullet.rigidbody2D.velocity = new Vector2(10, 0);
+        movingBullet.rigidbody2D.velocity = new Vector2(6, 0);
         //movingBullet.AddForce(transform.forward * 10);
 	}
 	
@@ -28,7 +28,7 @@ public class TeroristController : MonoBehaviour {
             oldBullet = movingBullet;
             Destroy(oldBullet);
             movingBullet = Instantiate(bullet, new Vector2(-7.13f, RandomBulletGenerator(-1.54f)), Quaternion.identity) as GameObject;
-            movingBullet.rigidbody2D.velocity = new Vector2(10, 0);
+            movingBullet.rigidbody2D.velocity = new Vector2(6, 0);
         }
         
         /*if (!movingBullet)
@@ -39,6 +39,14 @@ public class TeroristController : MonoBehaviour {
             
         }*/
 	}
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Paper")
+        {
+            //Destroy(gameObject);
+        }
+    }
 
     float RandomBulletGenerator(float number)
     {
