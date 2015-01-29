@@ -13,6 +13,11 @@ public class BulletController : MonoBehaviour {
 	
 	}
 
+    public void LoadNextLevel()
+    {
+        Application.LoadLevel(1);
+    }
+    
     /*void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")

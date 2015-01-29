@@ -17,7 +17,7 @@ public class CharController : MonoBehaviour {
     // Use this for initialization
 	void Start () 
     {
-        if (Application.loadedLevel == 2)
+        if (Application.loadedLevel == 3)
         {
             movingPaper = Instantiate(paper, new Vector2(7.715f, -1.83f), Quaternion.identity) as GameObject;
             movingPaper.rigidbody2D.velocity = new Vector2(-5, 0);
@@ -26,7 +26,7 @@ public class CharController : MonoBehaviour {
 
     void OnLevelWasLoaded()
     {
-        if(Application.loadedLevel == 2)
+        if(Application.loadedLevel == 3)
             InvokeRepeating("PaperInvoker", 3.0f, 2.5f);
     }
 
@@ -78,8 +78,8 @@ public class CharController : MonoBehaviour {
         bullet = GameObject.FindWithTag("Bullet");
         Destroy(bullet);
 
-        if(Application.loadedLevel == 0)
-            Application.LoadLevel(1);
+        if(Application.loadedLevel == 1)
+            Application.LoadLevel(2);
     }
 
     float RandomPaperGenerator(float number)

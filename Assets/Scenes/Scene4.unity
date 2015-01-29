@@ -255,7 +255,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: .00410900079, g: .0139489742, b: .0294117928, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -393,10 +393,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\"Kim, bir insan\u0131, bir can kar\u015F\u0131l\u0131\u011F\u0131 veya
-    yery\xFCz\xFCnde bir bozgunculuk \xE7\u0131karmak kar\u015F\u0131l\u0131\u011F\u0131
-    olmaks\u0131z\u0131n \xF6ld\xFCr\xFCrse, o sanki b\xFCt\xFCn insanlar\u0131 \xF6ld\xFCrm\xFC\u015Ft\xFCr.\"
-    (Maide:32)"
+  m_Text: '"He who kills a human, except that the human himself is a murderer or malevolent,
+    is like a man who kills all humanity." (Qur''an, Maide:32)'
 --- !u!222 &1482707879
 CanvasRenderer:
   m_ObjectHideFlags: 0
